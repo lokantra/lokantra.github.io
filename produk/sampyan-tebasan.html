@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sampyan Tebasan</title>
+
+    <!--
+- favicon
+-->
+    <link
+      rel="shortcut icon"
+      href="../assets/images/logo/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!--
+- custom css link
+-->
+    <link rel="stylesheet" href="wishas.css" />
+    <link rel="stylesheet" href="../assets/css/style-prefix.css" />
+
+    <!--
+- google font link
+-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <div id="header"></div>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== BREADCRUMB ===============-->
+      <section class="breadcrumb"></section>
+
+      <!--=============== DETAILS ===============-->
+      <section id="prodetails" class="section-p1">
+        <div class="product-featured">
+          <div class="showcase-wrapper has-scrollbar">
+            <div class="showcase-container">
+              <div class="showcase">
+                <div class="showcase-banner">
+                  <img
+                    src="/assets/images/products/sampyan-tebasan.jpg"
+                    alt="Sampyan Tebasan"
+                    class="showcase-img"
+                  />
+                </div>
+
+                <div class="showcase-content">
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <h3 class="judul">Sampyan Tebasan</h3>
+
+                  <a href="../Kategori/banten.html" class="showcase-title"
+                    >Banten
+                  </a>
+
+                  <div class="price-box">
+                    <p class="price">Rp5.000</p>
+                  </div>
+                  <div class="tombol">
+                    <input class="banyak" type="number" value="1" />
+                    <button class="add-cart-btn">
+                      <ion-icon
+                        style="color: white"
+                        name="logo-whatsapp"
+                      ></ion-icon>
+                      &nbsp Beli
+                    </button>
+                    <script>
+                      document
+                        .querySelector(".add-cart-btn")
+                        .addEventListener("click", function () {
+                          const jumlah =
+                            document.querySelector(".banyak").value;
+
+                          const pesan = `Halo, saya ingin membeli ${jumlah} Sampyan Tebasan. Apakah masih tersedia?
+                                                    > Dikirim dari Lokantra`;
+
+                          const encodedPesan = encodeURIComponent(pesan);
+
+                          const nomor = "6289635135678";
+
+                          const linkWA = `https://wa.me/${nomor}?text=${encodedPesan}`;
+                          window.open(linkWA, "_blank");
+                        });
+                    </script>
+                    <button class="add-cart-btn">
+                      <a href="">
+                        <ion-icon
+                          style="color: white"
+                          name="logo-instagram"
+                        ></ion-icon
+                      ></a>
+                    </button>
+                  </div>
+
+                  <h3 class="deskripsi">Deskripsi</h3>
+
+                  <p class="showcase-desc-pro">None</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="wishas" id="wishas">
+        <svg
+          style="display: none"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          aria-hidden="true"
+        >
+          <path
+            fill="#f8f9fa"
+            fill-opacity="1"
+            d="M0,0L48,32C96,64,192,128,288,138.7C384,149,480,107,576,106.7C672,107,768,149,864,144C960,139,1056,85,1152,69.3C1248,53,1344,75,1392,85.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+        <div>
+          <div></div>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-duration="1000">
+          <h2>Ulasan</h2>
+          <form>
+            <label for="name">Nama</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Masukan Nama Anda"
+              autocomplete="off"
+              required
+            />
+            <label for="status">Rating</label>
+            <select name="status" id="status" required aria-required="true">
+              <option value="" disabled selected>Rating</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label for="message">Ulasan </label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Tulis Ulasan"
+              required
+              minlength="8"
+            ></textarea>
+            <button type="submit">Kirim</button>
+          </form>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-duration="1000">
+          <p style="margin-bottom: 0.5rem"></p>
+          <hr />
+
+          <ul aria-label="list comentar"></ul>
+          <hr style="margin-top: 1rem" />
+          <div class="button-grup">
+            <button>
+              <i class="bx bxs-left-arrow-circle"></i>
+              <span>prev</span>
+            </button>
+            <span class="page-number"></span>
+            <button>
+              <span>next</span>
+              <i class="bx bxs-right-arrow-circle"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== DETAILS TAB ===============-->
+      <section class="details__tab"></section>
+
+      <!--=============== PRODUCTS ===============-->
+      <section class="products"></section>
+
+      <!--=============== NEWSLETTER ===============-->
+      <section class="newsletter"></section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer>
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">
+            Copyright &copy; <a href="#">Lokantra</a> all rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!--
+    - custom js link
+  -->
+    <script>
+      window.config = {
+        api: "https://script.google.com/macros/s/AKfycbxKYOZZryMFkLhsab4AkOEcmtRI7rcxsSFKQAKQkoCycJ0nYaKevMO4NQ-LBastHDb_/exec",
+        sheetName: "comentar4", // ganti sesuai halaman
+      };
+    </script>
+    <script type="module" src="wishas.js"></script>
+    <script src="main.js" type="module"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <!--
+- ionicon link
+-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
